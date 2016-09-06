@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>html5保持常亮</title>  
+	</head>
+<body>
+<video  controls="controls" width="0" height="0" autoplay="autoplay"  loop="loop"   style="display: none; z-index: -1000"><source src="video/light.mp4" type="video/mp4"></video> 
+<button onclick="onlight()" >保持常亮</button>
+<div id="onlight"></div>
+</body>
+<script>
+function onlight(){
+	var myVideo = document.getElementsByTagName("video")[0];
+    myVideo.play();  
+    document.getElementById("onlight").innerHTML="<font color='black'>已经常亮！！！</font>";
+}
+</script>
+</html>
